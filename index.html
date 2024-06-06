@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Bingyi Kang">
+  <meta name="description" content="I am a research scientist at TikTok. I received my PhD from National University of Singapore, advised by Jiashi Feng. I was also
+  fortunate to have worked as a visiting researcher at UC Berkeley, under the supervision of Prof. Trevor Darrell.">
+  <meta name="keywords" content="">
+  <title>Bingyi Kang's Homepage</title>
+
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="">
+  <link rel="icon" type="image/png" sizes="16x16" href="">
+  <link rel="manifest" href="">
+  <link rel="mask-icon" href="" color="#5bbad5">
+  <link rel="shortcut icon" href="">
+  <meta name="msapplication-TileColor" content="#9f00a7">
+  <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff"> -->
+
+  <!-- CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="css/animate.css" rel="stylesheet">
+  <link href="css/style.css?v=bc5ea2" rel="stylesheet">
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+  <!-- Preloader -->
+  <div id="preloader">
+    <div id="load"></div>
+  </div>
+
+  <!-- Navigation -->
+  <div id="navigation">
+    <nav class="navbar navbar-custom" role="navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                <i class="fa fa-bars"></i>
+              </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="menu">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#about">Home</a></li>
+                <!-- <li><a href="#next-news">News</a></li> -->
+                <li><a href="#next-publications">Publications</a></li>
+                <li><a href="#next-misc">Misc</a></li>
+                <!-- <li><a href="#next-contact">Contact</a></li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- /Navigation -->
+
+  <!-- Section: about -->
+  <section id="about" class="home-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="page-heading section-heading text-center">
+            <h2>Bingyi Kang</h2>
+            <!-- <p>Email: bingyikang@gmail.com</p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+          <img src="images/bykang_homepage.jpeg" class="img-responsive img-rounded" alt="" />
+          <!-- <p style="text-align:center">Research Scientist @ TikTok</p> -->
+          <p style="text-align:center">Email: bingyikang@gmail.com</p>
+          <p style="text-align:center">
+            <!-- <a href="mailto:bingykang@gmail.com">Email</a> &nbsp;|&nbsp; -->
+            <!-- <a href="data/JonBarron-CV.pdf">CV</a> &nbsp;|&nbsp; -->
+            <!-- <a href="data/JonBarron-bio.txt">Bio</a> &nbsp;|&nbsp; -->
+            <a href="https://scholar.google.com.sg/citations?user=NmHgX-wAAAAJ&hl=en">Scholar</a> &nbsp;|&nbsp;
+            <a href="https://twitter.com/bingyikang">Twitter</a> &nbsp;|&nbsp;
+            <a href="https://github.com/bingykang/">Github</a>
+          </p>
+        </div>
+        <div class="col-md-7">
+          <p style="text-align: justify;">
+            I am a research scientist at TikTok. My primary research interests are computer vision, multi-modal model
+            and decision making. My goal is to develop agents can acquire knowledge from and interact with the physical
+            world. I approach the goal from the following perspectives:
+          <ul>
+            <li>Data: dealing with arbitrary data (e.g., long-tailed, unlabeled and synthetic.)</li>
+            <!-- <li>Model: proper modeling methods to unleashing the power of data.</li> -->
+            <li>Recovering physical knowledge of the world from observations with proper modeling.</li>
+            <li>Effectively and efficiently utilizing the knowledge for interaction.</li>
+          </ul>
+          </p>
+          <p>
+            Previously, I was a research scientist at the <a href="https://sail.sea.com/">Sea AI Lab</a>. I received my
+            PhD from National University of Singapore,
+            advised
+            by <a href="https://sites.google.com/site/jshfeng/">Prof. Jiashi Feng</a>. I was also
+            fortunate to have worked as a visiting researcher at UC Berkeley, under the supervision of <a
+              href="https://people.eecs.berkeley.edu/~trevor/">Prof. Trevor
+              Darrell</a>. During my PhD study, I also interned at Facebook AI Research, working with <a
+              href="https://www.sainingxie.com/">Saining Xie</a>, <a href="https://www.skamalas.com/">Yannis
+              Kalantidis</a>, and <a href="http://rohrbach.vision/">Marcus Rohrbach</a>.
+          </p>
+          <p>
+            I am leading the development of <a href="https://depth-anything.github.io/">Depth Anything</a> series.
+            Academic discussion and collaboration are always welcome! Meanwhile, we have intern positions open for
+            application. Feel free to drop me an email if you are interested.
+          </p>
+          <!-- <p class="down-cv">
+              Download my <a target="_blank" href="files/CV_ChaoDu.pdf">CV</a>
+            </p> -->
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+
+    <div id="next-news"></div>
+  </section>
+  <!-- /Section: about -->
+
+  <!-- Section: News -->
+  <!-- <section id="news" class="home-section bg-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+          <div class="section-heading">
+            <h3>News</h3>
+          </div>
+
+          <ul class="competition">
+            <li>
+              2024-06: <a target="_blank" href="https://depth-anything-v2.github.io/">Depth Anything V2</a>
+              is released.
+            </li>
+            <li>
+              2024-01:<a target="_blank" href="https://depth-anything.github.io/">Depth Anything</a>
+              is released.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="next-publications"></div>
+  </section> -->
+  <!-- /Section: News -->
+
+  <!-- Section: publications -->
+  <section id="publications" class="home-section bg-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+          <div class="section-heading">
+            <h3>Recent and Selected Publications
+              <!-- <span class="equal"> <a target="_blank"
+                  href="https://scholar.google.com.sg/citations?user=NmHgX-wAAAAJ&hl=en">[Google Scholar]</a></span> -->
+            </h3>
+          </div>
+          <p>(* denotes equal contribution; &dagger; denotes project lead.) For full publication, please refer to <a
+              target="_blank" href="https://scholar.google.com.sg/citations?user=NmHgX-wAAAAJ&hl=en">Google
+              Scholar</a> </p>
+
+          <div class="row">
+            <div class="col-md-3">
+              <td align="center"><img src="images/world_model.png" class="img-responsive img-rounded" alt="" /></td>
+            </div>
+            <div class="col-md-9">
+              <div class="publication">
+                <div class="text">
+                  <div class="title">
+                    Improving Token-Based World Models with Parallel Observation Prediction
+                  </div>
+                  <div class="authors">
+                    Lior Cohen, Kaixin Wang, <span class="self">Bingyi Kang</span>, Shie Mannor
+                  </div>
+                </div>
+                <div class="venue">International Conference on Machine Learning <span class="venue-st">(ICML)</span>,
+                  Vienna, Austria, 2024</div>
+                <span class="tag"><a target="_blank"
+                    href="https://arxiv.org/abs/2402.05643">Paper</a></span>&nbsp;/&nbsp;
+                <span class="tag"><a target="_blank" href="https://github.com/leor-c/REM">Code</a></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-3">
+              <!-- <td align="center"><img src="images/chaodu.jpg" class="img-responsive img-rounded" alt="" /></td> -->
+              <td align="center"></td><video muted autoplay="autoplay" loop="loop" src="images/depth_anything.mp4"
+                class="img-responsive img-rounded" style="border-style: none"></video></td>
+            </div>
+            <div class="col-md-9">
+              <div class="publication">
+                <div class="text">
+                  <div class="title">
+                    Depth Anything: Unleashing the Power of Large-Scale Unlabeled Data
+                  </div>
+                  <div class="authors">
+                    Lihe Yang, <span class="self">Bingyi Kang</span>&dagger;, Zilong Huang, Xiaogang Xu, Jiashi
+                    Feng,Hengshuang Zhao
+                  </div>
+                </div>
+                <div class="venue">IEEE Conference on Computer Vision and Pattern Recognition <span
+                    class="venue-st">(CVPR)</span>, Seattle, USA, 2024</div>
+                <!-- <div class="highlight">(Oral, Acceptance rate~1.2%)</div> -->
+                <span class="tag"><a target="_blank" href="https://depth-anything.github.io/">Project
+                    Page</a></span>&nbsp;/&nbsp;
+                <span class="tag"><a target="_blank"
+                    href="https://arxiv.org/abs/2401.10891">Paper</a></span>&nbsp;/&nbsp;
+                <span class="tag"><a target="_blank" href="https://github.com/LiheYoung/Depth-Anything">Code</a></span>
+                <iframe
+                  src="https://ghbtns.com/github-btn.html?user=LiheYoung&repo=Depth-Anything&type=star&count=true&size=small"
+                  frameborder="0" scrolling="0" width="100px" height="20px"></iframe>&nbsp;/&nbsp;
+                <span class="tag"><a target="_blank"
+                    href="https://huggingface.co/spaces/LiheYoung/Depth-Anything">Demo</a></span>&nbsp;/&nbsp;
+                <span class="tag"><a target="_blank"
+                    href="https://twitter.com/_akhaliq/status/1749284669936275463">Media</a></span>
+              </div>
+            </div>
+          </div>
+
+          <b>&nbsp</b>
+
+          <div class="row">
+            <div class="col-md-3">
+              <td align="center"><img src="images/seem_poster.jpg" class="img-responsive img-rounded" alt="" /></td>
+            </div>
+            <div class="col-md-9">
+              <div class="publication">
+                <div class="text">
+                  <div class="title">
+                    Understanding, predicting and better resolving q-value divergence in offline-rl
+                  </div>
+                  <div class="authors">
+                    Yang Yue*, Rui Lu*, <span class="self">Bingyi Kang</span>*, Shiji Song, Gao Huang
+                  </div>
+                </div>
+                <div class="venue">Advances in Neural Information Processing Systems <span
+                    class="venue-st">(NeurIPS)</span>, New Orleans, USA, 2023</div>
+                <!-- <div class="highlight">(Oral, Acceptance rate~1.2%)</div> -->
+                <span class="tag"><a target="_blank" href="https://offrl-seem.github.io/">Project
+                    Page</a></span>&nbsp;/&nbsp;
+                <span class="tag"><a target="_blank"
+                    href="https://arxiv.org/abs/2310.04411">Paper</a></span>&nbsp;/&nbsp;
+                <span class="tag"><a target="_blank" href="https://github.com/yueyang130/SEEM/">Code</a></span>
+                <iframe
+                  src="https://ghbtns.com/github-btn.html?user=yueyang130&repo=SEEM&type=star&count=true&size=small"
+                  frameborder="0" scrolling="0" width="100px" height="20px"></iframe>&nbsp;/&nbsp;
+                <span class="tag"><a target="_blank"
+                    href="https://drive.google.com/file/d/1JCxqy7Aa9lr3bLf4uPvu_JFuu_iX9mxZ/view?usp=drive_link">Slides</a></span>&nbsp;/&nbsp;
+                <span class="tag"><a target="_blank"
+                    href="https://drive.google.com/file/d/19X8lLb98kSzr8rnFtRNkW2qtgtEZRsVz/view?usp=drive_link">Poster</a></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- <b>&nbsp</b> -->
+
+          <div class="row">
+            <div class="col-md-3">
+              <td align="center"><img src="images/edp_teaser.png" class="img-responsive img-rounded" alt="" /></td>
+            </div>
+            <div class="col-md-9">
+              <div class="publication">
+                <div class="text">
+                  <div class="title">
+                    Efficient diffusion policies for offline reinforcement learning
+                  </div>
+                  <div class="authors">
+                    <span class="self">Bingyi Kang</span>*, Xiao Ma*, Chao Du, Tianyu Pang, Shuicheng Yan
+                  </div>
+                </div>
+                <div class="venue">Advances in Neural Information Processing Systems <span
+                    class="venue-st">(NeurIPS)</span>, New Orleans, USA, 2023</div>
+                <!-- <div class="highlight">(Oral, Acceptance rate~1.2%)</div> -->
+                <span class="tag"><a target="_blank"
+                    href="https://arxiv.org/abs/2305.20081">Paper</a></span>&nbsp;/&nbsp;
+                <span class="tag"><a target="_blank" href="https://github.com/sail-sg/edp">Code</a></span>
+                <iframe src="https://ghbtns.com/github-btn.html?user=sail-sg&repo=edp&type=star&count=true&size=small"
+                  frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-3">
+              <td align="center"><img src="images/misa.png" class="img-responsive img-rounded" alt="" /></td>
+            </div>
+            <div class="col-md-9">
+              <div class="publication">
+                <div class="text">
+                  <div class="title">
+                    Mutual Information Regularized Offline Reinforcement Learning
+                  </div>
+                  <div class="authors">
+                    Xiao Ma*, <span class="self">Bingyi Kang</span>*, Zhongwen Xu, Min Lin, Zhongwen Xu, Shuicheng Yan
+                  </div>
+                </div>
+                <div class="venue">Advances in Neural Information Processing Systems <span
+                    class="venue-st">(NeurIPS)</span>, New Orleans, USA, 2023</div>
+                <!-- <div class="highlight">(Oral, Acceptance rate~1.2%)</div> -->
+                <span class="tag"><a target="_blank"
+                    href="https://arxiv.org/abs/2305.20081">Paper</a></span>&nbsp;/&nbsp;
+                <span class="tag"><a target="_blank" href="https://github.com/sail-sg/misa">Code</a></span>
+                <iframe src="https://ghbtns.com/github-btn.html?user=sail-sg&repo=misa&type=star&count=true&size=small"
+                  frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-3">
+              <td align="center"><img src="images/freemask.png" class="img-responsive img-rounded" alt="" /></td>
+            </div>
+            <div class="col-md-9">
+              <div class="publication">
+                <div class="text">
+                  <div class="title">
+                    FreeMask: Synthetic Images with Dense Annotations Make Stronger Segmentation Models
+                  </div>
+                  <div class="authors">
+                    Lihe Yang, Xiaogang Xu, <span class="self">Bingyi Kang</span>, Yinghuan Shi, Hengshuang Zhao
+                  </div>
+                </div>
+                <div class="venue">Advances in Neural Information Processing Systems <span
+                    class="venue-st">(NeurIPS)</span>, New Orleans, USA, 2023</div>
+                <span class="tag"><a target="_blank"
+                    href="https://arxiv.org/abs/2310.15160">Paper</a></span>&nbsp;/&nbsp;
+                <span class="tag"><a target="_blank" href="https://github.com/LiheYoung/FreeMask">Code</a></span>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-3">
+              <td align="center"><img src="images/balfeat.jpg" class="img-responsive img-rounded" alt="" /></td>
+            </div>
+            <div class="col-md-9">
+              <div class="publication">
+                <div class="text">
+                  <div class="title">
+                    Exploring balanced feature spaces for representation learning
+                  </div>
+                  <div class="authors">
+                    <span class="self">Bingyi Kang</span>, Yu Li, Sa Xie, Zehuan Yuan, Jiashi Feng
+                  </div>
+                </div>
+                <div class="venue">International Conference on Learning Representations<span
+                    class="venue-st">(ICLR)</span>, Virtual Only, 2021</div>
+                <span class="tag"><a target="_blank"
+                    href="https://openreview.net/pdf?id=OqtLIabPTit">Paper</a></span>&nbsp;/&nbsp;
+                <span class="tag"><a target="_blank" href="https://github.com/bingykang/BalFeat">Code</a></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-3">
+              <td align="center"><img src="images/decouple.png" class="img-responsive img-rounded" alt="" /></td>
+            </div>
+            <div class="col-md-9">
+              <div class="publication">
+                <div class="text">
+                  <div class="title">
+                    Decoupling Representation and Classifier for Long-Tailed Recognition
+                  </div>
+                  <div class="authors">
+                    <span class="self">Bingyi Kang</span>, Saining Xie Marcus Rohrbach, Zhicheng Yan, Albert Gordo,
+                    Jiashi Feng, Yannis Kalantidis
+                  </div>
+                </div>
+                <div class="venue">International Conference on Learning Representations <span
+                    class="venue-st">(ICLR)</span>, 2020</div>
+                <span class="tag"><a target="_blank"
+                    href="https://arxiv.org/abs/1910.09217">Paper</a></span>&nbsp;/&nbsp;
+                <span class="tag"><a target="_blank"
+                    href="https://github.com/facebookresearch/classifier-balancing">Code</a></span>
+                <iframe
+                  src="https://ghbtns.com/github-btn.html?user=facebookresearch&repo=classifier-balancing&type=star&count=true&size=small"
+                  frameborder="0" scrolling="0" width="100px" height="20px"></iframe>&nbsp;/&nbsp;
+                <span class="tag"><a target="_blank"
+                    href="https://docs.google.com/presentation/d/1ALgcp2RBaC7T9Pbgh4qciZ2gFSc_yV_ajfV78RCjLhs/edit?usp=sharing">Slides</a></span>&nbsp;/&nbsp;
+                <span class="tag"><a target="_blank"
+                    href="https://iclr.cc/virtual_2020/poster_r1gRTCVFvB.html">Talk</a></span>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-3">
+              <td align="center"><img src="images/few.jpg" class="img-responsive img-rounded" alt="" /></td>
+            </div>
+            <div class="col-md-9">
+              <div class="publication">
+                <div class="text">
+                  <div class="title">
+                    Few-shot object detection via feature reweighting
+                  </div>
+                  <div class="authors">
+                    <span class="self">Bingyi Kang</span>*, Zhuang Liu*, Xin Wang, Fisher Yu, Jiashi Feng, Trevor
+                    Darrell
+                  </div>
+                </div>
+                <div class="venue">International Conference on Computer Vision <span class="venue-st">(ICCV)</span>,
+                  2019</div>
+                <span class="tag"><a target="_blank"
+                    href="https://arxiv.org/abs/1812.01866">Paper</a></span>&nbsp;/&nbsp;
+                <span class="tag"><a target="_blank"
+                    href="https://github.com/bingykang/Fewshot_Detection">Code</a></span>
+                <iframe
+                  src="https://ghbtns.com/github-btn.html?user=bingykang&repo=Fewshot_Detection&type=star&count=true&size=small"
+                  frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-3">
+              <td align="center"><img src="images/pofd.png" class="img-responsive img-rounded" alt="" /></td>
+            </div>
+            <div class="col-md-9">
+              <div class="publication">
+                <div class="text">
+                  <div class="title">
+                    Policy Optimization with Demonstrations
+                  </div>
+                  <div class="authors">
+                    <span class="self">Bingyi Kang</span>*, Zequn Jie, Jiashi Feng
+                  </div>
+                </div>
+                <div class="venue">International conference on machine learning <span class="venue-st">(ICML)</span>,
+                  2018</div>
+                <span class="tag"><a target="_blank"
+                    href="https://proceedings.mlr.press/v80/kang18a/kang18a.pdf">Paper</a></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-heading">
+            <!-- <h3>Technical Reports</h3> -->
+            <h3>Open Projects</h3>
+          </div>
+
+          <div class="row">
+            <div class="col-md-3">
+              <td align="center"><img src="images/bubogpt.png" class="img-responsive img-rounded" alt="" /></td>
+            </div>
+            <div class="col-md-9">
+              <div class="publication">
+                <div class="text">
+                  <div class="title">
+                    BuboGPT: Enabling Visual Grounding in Multi-Modal LLMs
+                  </div>
+                  <div class="authors">
+                    Yang Zhao*, Zhijie Lin*, Daquan Zhou, Zilong Huang, Jiashi Feng and <span class="self">Bingyi
+                      Kang</span>&dagger;
+                  </div>
+                </div>
+                <div class="venue">Open Project<span class="venue-st"></span>,
+                  2023</div>
+                <span class="tag"><a target="_blank" href="https://bubo-gpt.github.io/">Project
+                    Page</a></span>&nbsp;/&nbsp;
+                <span class="tag"><a target="_blank"
+                    href="https://arxiv.org/abs/2307.08581">Paper</a></span>&nbsp;/&nbsp;
+                <span class="tag"><a target="_blank" href="https://github.com/magic-research/bubogpt">Code</a></span>
+                <iframe
+                  src="https://ghbtns.com/github-btn.html?user=magic-research&repo=bubogpt&type=star&count=true&size=small"
+                  frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div id="next-misc"></div>
+
+          <!-- <div class="section-heading">
+            <h3>Competitions</h3>
+          </div>
+
+          <ul class="competition">
+            <li>
+              <a target="_blank" href="http://hof.geekpwn.org/caad/en/index2.html">CAAD CTF Las Vegas</a> at <a
+                target="_blank" href="https://www.defcon.org/html/defcon-26/dc-26-index.html">DEF CON&#174; 26</a>,
+              <span class="award-lv">1st place</span>, 2018
+            </li>
+            <li>
+              <a target="_blank" href="http://hof.geekpwn.org/caad/en/index3.html">CAAD CTF Shanghai</a>, <span
+                class="award-lv">3rd place</span>, 2018
+            </li>
+            <li>
+              <a target="_blank" href="http://hof.geekpwn.org/caad/en/index.html">CAAD Online, Non-targeted Adversarial
+                Attacks Track</a>, <span class="award-lv">3rd place</span>, 2018
+            </li>
+            <li>
+              <a target="_blank" href="http://hof.geekpwn.org/caad/en/index.html">CAAD Online, Targeted Adversarial
+                Attacks Track</a>, <span class="award-lv">2nd place</span>, 2018
+            </li>
+            <li>
+              <a target="_blank" href="http://hof.geekpwn.org/caad/en/index.html">CAAD Online, Defense Against
+                Adversarial Attack Track</a>, <span class="award-lv">2nd place</span>, 2018
+            </li>
+          </ul> -->
+
+          <div class="section-heading">
+            <h3>Services</h3>
+          </div>
+
+          <ul class="service">
+            <li>
+              Reviewer: <span class="rev-conf">ICML, NeurIPS, ICLR, CVPR, ICCV, ECCV, TPAMI, etc</span>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="next-contact"></div>
+  </section>
+  <!-- /Section: publications -->
+
+  <!-- Section: contact -->
+  <!-- <section id="contact" class="home-section">
+    <div class="heading-contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+
+            <div class="section-heading text-center">
+              <h3>Contact Me</h3>
+            </div>
+
+            <div class="text-center">
+              <p>user at gmail dot com</p>
+              <span class="icon">
+                <a target="_blank" href="https://github.com"><i class="fa fa-github fa-2x"></i></a>
+              </span>
+              <span class="icon">
+                <a target="_blank" href="https://www.linkedin.com/"><i class="fa fa-linkedin-square fa-2x"></i></a>
+              </span>
+              <span class="icon">
+                <a target="_blank" href="https://twitter.com/"><i class="fa fa-twitter fa-2x"></i></a>
+              </span>
+              <span class="icon">
+                <a target="_blank" href="user"><i class="fa fa-weixin fa-2x"></i></a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- /Section: contact -->
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-12">
+          Last updated on June. 2024
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core JavaScript Files -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/wow.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script src="js/custom.js"></script>
+
+</body>
+
+</html>

@@ -432,6 +432,14 @@ span.self {
   font-weight: 600;
 }
 
+.note {
+  /*font-style: normal;*/
+  font-size: 15px;
+  /* color: olive; */
+  color: lightsalmon;
+  font-weight: 400;
+}
+
 span.tag {
   padding-right: 1px;
 }

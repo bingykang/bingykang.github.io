@@ -521,7 +521,7 @@ footer {
 --- Elements
 ============================ */
 
-
+/* 
 @-webkit-keyframes pulse {
   0 {
     -webkit-transform: scale(1);
@@ -554,7 +554,7 @@ footer {
     -moz-transform: scale(1);
     transform: scale(1);
   }
-}
+} */
 
 
 /* Media queries */

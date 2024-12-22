@@ -51,7 +51,7 @@
                 <li class="active"><a href="#about">Home</a></li>
                 <!-- <li><a href="#next-news">News</a></li> -->
                 <li><a href="#next-publications">Publications</a></li>
-                <li><a href="#next-misc">Misc</a></li>
+                <li><a href="#next-misc">Services</a></li>
                 <!-- <li><a href="#next-contact">Contact</a></li> -->
               </ul>
             </div>
@@ -93,7 +93,7 @@
         </div>
         <div class="col-md-7" style="font-weight: 400;">
           <p style="text-align: justify; margin-bottom: 5px;">
-            I am a research scientist at TikTok. My primary research interests are computer vision, multi-modal models
+            I am a research scientist at TikTok, Seattle. My primary research interests are computer vision, multi-modal models
             and decision making. My goal is to develop agents that can acquire knowledge from various observations and
             interact with the physical world. I approach the goal from the following perspectives:
           <ul>
@@ -116,8 +116,8 @@
           </p>
           <p>
             I am leading the development of <a href="https://depth-anything.github.io/">Depth Anything</a> series.
-            Academic discussion and collaboration are always welcome! Meanwhile, we have intern positions 
-            (<strong><i>on 3D&4D foundation models</i></strong>) open for application. Feel free to drop me an email if you are interested.
+            We have multiple intern and FTE positions (<strong><i>on 3D&4D foundation models</i></strong>) open for application. 
+            Feel free to drop me an email if you are interested.
           </p>
           <!-- <p class="down-cv">
               Download my <a target="_blank" href="files/CV_ChaoDu.pdf">CV</a>
@@ -132,37 +132,46 @@
   </section>
   <!-- /Section: about -->
 
-  <!-- Section: News -->
-  <!-- <section id="news" class="home-section bg-gray">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-10 col-lg-offset-1">
-          <div class="section-heading">
-            <h3>News</h3>
-          </div>
-
-          <ul class="competition">
-            <li>
-              2024-06: <a target="_blank" href="https://depth-anything-v2.github.io/">Depth Anything V2</a>
-              is released.
-            </li>
-            <li>
-              2024-01:<a target="_blank" href="https://depth-anything.github.io/">Depth Anything</a>
-              is released.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div id="next-publications"></div>
-  </section> -->
-  <!-- /Section: News -->
-
   <!-- Section: publications -->
   <section id="publications" class="home-section bg-gray">
     <div class="container">
       <div class="row">
         <div class="col-lg-10 col-lg-offset-1">
+          <div class="section-heading" style="margin-bottom: 0ch; margin-top: 0ch;">
+            <h3>News</h3>
+          </div>
+
+          <ul class="competition">
+            <!-- <li><strong>2024-12: </strong> I will serve as an Area Chair at ICML 2025 and ICCV 2025.</li> -->
+            <li>
+              <strong>2024-11: </strong> Our work, <a target="_blank" href="https://phyworld.github.io/">Phyworld</a>,
+              investigating whether video generation models can learn physical laws, has been released. 
+              It sparked heated discussions on X and was highlighted by many researchers.
+              See details at this <a target="_blank" href="https://phyworld.github.io/#twitter">URL</a>.
+            </li>
+            <li>
+              <strong>2024-06: </strong> <a target="_blank" href="https://depth-anything-v2.github.io/">Depth Anything V2</a>
+              was optimized for Apple Neural Engine and selected as official 
+              <a target="_blank" href="https://developer.apple.com/machine-learning/models/">Core ML Models</a> by Apple.
+              Now, you can use is for fun on-device applications.
+            </li>
+            <li>
+              <strong>2024-06:</strong> Depth Anything <a target="_blank" href="https://depth-anything.github.io/">V1</a> and
+              <a target="_blank" href="https://depth-anything-v2.github.io/">V2</a> were intergrated into 
+              <a target="_blank" href="https://huggingface.co/docs/transformers/index">transformers</a>, 
+              the popular codebase for state-of-the-art machine learning by Hugging Face. See documents at 
+              <a target="_blank" href="https://huggingface.co/docs/transformers/main/en/model_doc/depth_anything">dav1</a> and 
+              <a target="_blank" href="https://huggingface.co/docs/transformers/main/en/model_doc/depth_anything_v2">dav2</a>.
+            </li>
+            <!-- <a href="javascript:toggleblock('old_news')">---- show more ----</a>
+            <div id="old_news" style="display: none;">
+              <li>
+                old one
+              </li>
+            </div> -->
+          </ul>
+
+
           <div class="section-heading">
             <h3>Recent and Selected Publications
               <!-- <span class="equal"> <a target="_blank"
@@ -479,7 +488,6 @@
                   perfectly explains the Q-value divergence problem in offline RL. It can reliably predict upcoming
                   divergence through the largest eigenvalue of a kernel matrix and accurately characterize the growth
                   order of diverging Q-values.
-                  <!-- With SEEM, the divergence can be resolved by regularizing the neural network’s generalization behavior. -->
                 </div>
               </div>
             </div>
@@ -804,6 +812,7 @@
   <script src="js/jquery.easing.min.js"></script>
   <script src="js/jquery.sticky.js"></script>
   <script src="js/wow.min.js"></script>
+  <script src="js/function.js"></script>
   <!-- Custom Theme JavaScript -->
   <script src="js/custom.js"></script>
 

@@ -1,0 +1,214 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap');
+
+/* --- Base --- */
+body {
+  background-color: #F7F4EF;
+  color: #1B2A4A;
+  font-family: "Source Serif 4", Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Nav --- */
+nav a {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 300ms ease;
+  text-decoration: none;
+  color: #1B2A4A;
+}
+nav a:hover { color: #E8C340; }
+
+/* --- Post header --- */
+.post-title {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #1B2A4A;
+}
+
+.post-subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  color: rgba(27, 42, 74, 0.5);
+  margin-top: 1rem;
+}
+
+.post-author {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #1B2A4A;
+  text-decoration: none;
+}
+.post-date {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #6B7280;
+}
+
+/* --- Prose --- */
+.prose-doc {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.58;
+  letter-spacing: -0.003em;
+  color: #1B2A4A;
+  padding: 0 1.5rem;
+}
+
+.prose-doc h2 {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: -0.012em;
+  line-height: 1.22;
+  margin-top: 2.2em;
+  margin-bottom: 0.4em;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid #1B2A4A;
+  display: inline-block;
+  color: #1B2A4A;
+}
+
+.prose-doc h3 {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: #1B2A4A;
+}
+
+.prose-doc p {
+  margin-bottom: 1.5rem;
+}
+
+.prose-doc a {
+  color: #1B2A4A;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(27, 42, 74, 0.4);
+  transition: text-decoration-color 300ms ease;
+}
+.prose-doc a:hover { text-decoration-color: #E8C340; }
+
+.prose-doc ul, .prose-doc ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.prose-doc ul { list-style: disc; }
+.prose-doc ol { list-style: decimal; }
+.prose-doc li { margin-bottom: 0.4rem; }
+
+.prose-doc blockquote {
+  border-left: 3px solid #1B2A4A;
+  padding-left: 1.25rem;
+  margin: 2rem 0;
+  color: rgba(27, 42, 74, 0.65);
+  font-style: italic;
+}
+
+.prose-doc code {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.85em;
+  background: rgba(27, 42, 74, 0.07);
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+}
+
+.prose-doc pre {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.875rem;
+  background: rgba(27, 42, 74, 0.06);
+  border: 1px solid rgba(27, 42, 74, 0.12);
+  padding: 1.25rem 1.5rem;
+  border-radius: 3px;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+.prose-doc pre code {
+  background: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+.prose-doc .post-image {
+  border: 1px solid rgba(27, 42, 74, 0.1);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.prose-doc .post-image img {
+  width: 100%;
+  display: block;
+}
+.prose-doc .post-image figcaption {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: rgba(27, 42, 74, 0.5);
+  padding: 0.6rem 1rem;
+  border-top: 1px solid rgba(27, 42, 74, 0.08);
+}
+
+/* --- Mobile --- */
+@media (max-width: 640px) {
+  .post-title { letter-spacing: -0.01em; }
+  .prose-doc { font-size: 1rem; }
+  .prose-doc h2 { font-size: 1.15rem; }
+  .prose-doc h3 { font-size: 1rem; }
+  .prose-doc pre { font-size: 0.8rem; padding: 1rem; }
+}
+
+/* Responsive left vertical line (≥720px) */
+@media (min-width: 720px) {
+  .prose-doc {
+    position: relative;
+    padding-left: 2.75rem;
+    padding-right: 2.75rem;
+  }
+  .prose-doc::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(27, 42, 74, 0.1);
+  }
+}
+
+/* --- Extras --- */
+.katex { font-size: 1em; }
+
+.katex-display {
+  overflow-x: auto;
+  padding: 0.5rem 0;
+  margin: 1.5rem 0;
+}
+
+hr.section-divider {
+  border: none;
+  border-top: 1px solid rgba(27, 42, 74, 0.15);
+  margin: 3rem 0;
+}
+
+.callout {
+  background: rgba(232, 195, 64, 0.12);
+  border-left: 3px solid #E8C340;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0 3px 3px 0;
+}
+.callout p { margin-bottom: 0; }
+.callout code { background: rgba(232, 195, 64, 0.2); }

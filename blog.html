@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Bingyi Kang">
+  <title>Blog — Bingyi Kang</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:  '#1B2A4A',
+            yellow: '#E8C340',
+            cream: '#F7F4EF',
+            graphite: '#4A5568',
+          },
+          fontFamily: {
+            mono: ['"JetBrains Mono"', 'monospace'],
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { background-color: #F7F4EF; color: #1B2A4A; font-family: "Source Serif 4", Georgia, serif; }
+
+    nav a {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 300ms ease;
+      text-decoration: none;
+      color: #1B2A4A;
+    }
+    nav a:hover { color: #E8C340; }
+
+    .section-label {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #1B2A4A;
+      opacity: 0.5;
+    }
+
+    .blog-card {
+      display: block;
+      border-left: 4px solid rgba(27, 42, 74, 0.2);
+      padding: 1rem 0 1rem 2rem;
+      margin-bottom: 2rem;
+      transition: border-color 300ms ease;
+      text-decoration: none;
+      color: inherit;
+    }
+    .blog-card:hover { border-color: #1B2A4A; }
+    .blog-date {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #6B7280;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .blog-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+      color: #1B2A4A;
+      transition: color 300ms ease;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .blog-card:hover .blog-title { color: #E8C340; }
+    .blog-desc { font-size: 0.95rem; color: rgba(27,42,74,0.6); line-height: 1.6; }
+
+    footer {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+      opacity: 0.5;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav style="border-top: 3px solid #1B2A4A;">
+    <div class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+      <span class="font-mono tracking-widest uppercase opacity-60 font-bold" style="font-size: 0.8rem;">Bingyi Kang</span>
+      <div class="flex gap-4 sm:gap-8">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="blog.html" style="font-weight:600;">Blog</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Blog -->
+  <section class="py-16">
+    <div class="max-w-4xl mx-auto px-6">
+
+      <p class="section-label mb-2">Writing</p>
+      <h2 style="font-family: 'JetBrains Mono', monospace; font-size: 1.375rem; font-weight: 700; line-height: 1.22; letter-spacing: -0.012em; padding-bottom: 0.3em; border-bottom: 2px solid #1B2A4A; display: inline-block; margin-bottom: 2.5rem;">Blog</h2>
+
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: rgba(27,42,74,0.35); letter-spacing: 0.02em; margin-bottom: 2rem; padding-left: 0.5rem;">
+        Mostly a placeholder — though I do like the idea of writing here someday.
+        The style was inspired by <a href="https://www.hapticlabs.ai/blog" target="_blank" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">hapticlabs.ai/blog</a>.
+      </p>
+
+      <div class="max-w-2xl" style="padding-left: 0.5rem;">
+
+        <a href="posts/how-to-write-a-post.html" class="blog-card">
+          <span class="blog-date">19 Mar 2026</span>
+          <span class="blog-title">How to Write a Blog Post</span>
+          <p class="blog-desc">
+            A guide to the file format, folder structure, and styling conventions for adding new posts to this site.
+          </p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+</body>
+</html>

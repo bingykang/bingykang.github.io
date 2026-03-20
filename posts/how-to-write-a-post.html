@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Bingyi Kang">
+  <title>How to Write a Blog Post — Bingyi Kang</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- KaTeX for math rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
+  <script defer
+    src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$',  right: '$',  display: false}
+      ]
+    });">
+  </script>
+
+  <link rel="stylesheet" href="post.css">
+</head>
+
+<body>
+
+  <!-- ============================================================
+       Navigation
+       ============================================================ -->
+  <nav style="border-top: 3px solid #1B2A4A;">
+    <div class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <span style="font-family: 'JetBrains Mono', monospace;
+                   font-size: 0.8rem;
+                   font-weight: 700;
+                   letter-spacing: 0.15em;
+                   text-transform: uppercase;
+                   opacity: 0.5;">
+        Bingyi Kang
+      </span>
+
+      <div class="flex gap-4 sm:gap-8">
+        <a href="../index.html">Home</a>
+        <a href="../research.html">Research</a>
+        <a href="../blog.html" style="font-weight: 600;">Blog</a>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+       Post header
+       ============================================================ -->
+  <section style="padding: clamp(2rem, 6vw, 4rem) 0 2rem;">
+    <div class="mx-auto px-6" style="max-width: 56rem;">
+
+      <h1 class="post-title">How to Write a Blog Post</h1>
+
+      <p class="post-subtitle">
+        A guide to the file format, folder structure, and styling conventions
+        for adding new posts to this site.
+      </p>
+
+      <div style="display: flex; align-items: center; gap: 0.75rem; margin-top: 1.5rem;">
+        <span class="post-author">Bingyi Kang</span>
+        <span style="color: #9CA3AF;">·</span>
+        <span class="post-date">19 Mar 2026</span>
+      </div>
+
+      <div style="border-bottom: 1px solid rgba(27,42,74,0.1); margin-top: 1.5rem;"></div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       Post body
+       ============================================================ -->
+  <section style="padding-top: 2rem; padding-bottom: 4rem;">
+    <div class="mx-auto px-6" style="max-width: 56rem;">
+      <article class="prose-doc">
+
+
+        <!-- Overview -->
+        <h2>Overview</h2>
+        <p>
+          Each blog post is a standalone HTML file inside the <code>posts/</code> folder.
+          All styling lives in <code>posts/post.css</code> — new posts only need the minimal
+          skeleton below, no copy-pasting of CSS. Update the metadata and content, then add
+          a card to <code>blog.html</code> to make it appear in the listing.
+        </p>
+
+        <div class="callout">
+          <p>
+            <strong>Minimal skeleton:</strong> copy the snippet in section 01 below —
+            it's about 30 lines, not 200.
+          </p>
+        </div>
+
+
+        <!-- 01 — Folder Structure & Minimal Skeleton -->
+        <h2>01 — Folder Structure &amp; Minimal Skeleton</h2>
+        <p>The site is organized as follows:</p>
+
+        <pre><code>homepage_new/
+├── index.html          ← Home page
+├── research.html       ← Publications
+├── blog.html           ← Blog listing
+└── posts/
+    ├── post.css                   ← Shared styles (fonts, prose, nav, …)
+    ├── how-to-write-a-post.html   ← This file (reference)
+    └── your-new-post.html         ← Your new post</code></pre>
+
+        <p>
+          Name your file with lowercase words separated by hyphens, e.g.
+          <code>depth-anything-lessons.html</code>.
+          There is no build step — everything is plain HTML.
+        </p>
+
+        <p>Start every new post from this skeleton — all styling comes from <code>post.css</code>:</p>
+
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;meta name="author" content="Bingyi Kang"&gt;
+  &lt;title&gt;Your Post Title — Bingyi Kang&lt;/title&gt;
+
+  &lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;
+
+  &lt;!-- Remove the three KaTeX lines below if the post has no math --&gt;
+  &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css"&gt;
+  &lt;script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"&gt;&lt;/script&gt;
+  &lt;script defer
+    src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$',  right: '$',  display: false}
+      ]
+    });"&gt;
+  &lt;/script&gt;
+
+  &lt;link rel="stylesheet" href="post.css"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+  &lt;!-- Navigation --&gt;
+  &lt;nav style="border-top: 3px solid #1B2A4A;"&gt;
+    &lt;div class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between"&gt;
+      &lt;span style="font-family: 'JetBrains Mono', monospace;
+                   font-size: 0.72rem;
+                   font-weight: 700;
+                   letter-spacing: 0.15em;
+                   text-transform: uppercase;
+                   opacity: 0.5;"&gt;
+        Bingyi Kang
+      &lt;/span&gt;
+      &lt;div class="flex gap-8"&gt;
+        &lt;a href="../index.html"&gt;Home&lt;/a&gt;
+        &lt;a href="../research.html"&gt;Research&lt;/a&gt;
+        &lt;a href="../blog.html" style="font-weight: 600;"&gt;Blog&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+
+  &lt;!-- Post header --&gt;
+  &lt;section style="padding: clamp(2rem, 6vw, 4rem) 0 2rem;"&gt;
+    &lt;div class="mx-auto" style="max-width: 56rem;"&gt;
+
+      &lt;h1 class="post-title"&gt;Your Post Title Here&lt;/h1&gt;
+      &lt;p class="post-subtitle"&gt;A brief description of what this post is about.&lt;/p&gt;
+
+      &lt;div style="display: flex; align-items: center; gap: 0.75rem; margin-top: 1.5rem;"&gt;
+        &lt;span class="post-author"&gt;Bingyi Kang&lt;/span&gt;
+        &lt;span style="color: #9CA3AF;"&gt;·&lt;/span&gt;
+        &lt;span class="post-date"&gt;DD MMM YYYY&lt;/span&gt;
+      &lt;/div&gt;
+
+      &lt;div style="border-bottom: 1px solid rgba(27,42,74,0.1); margin-top: 1.5rem;"&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;!-- Post body --&gt;
+  &lt;section style="padding-top: 2rem; padding-bottom: 4rem;"&gt;
+    &lt;div class="mx-auto" style="max-width: 56rem;"&gt;
+      &lt;article class="prose-doc"&gt;
+
+        &lt;!-- Your content here --&gt;
+
+      &lt;/article&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+        <!-- 02 — Post Header Metadata -->
+        <h2>02 — Post Header Metadata</h2>
+        <p>At the top of each post, update these four fields inside the header section:</p>
+
+        <pre><code>&lt;title&gt;Your Post Title — Bingyi Kang&lt;/title&gt;</code></pre>
+
+        <pre><code>&lt;!-- Post title --&gt;
+&lt;h1 class="post-title"&gt;Your Post Title Here&lt;/h1&gt;
+
+&lt;!-- One-sentence subtitle (optional) --&gt;
+&lt;p class="post-subtitle"&gt;A brief description of what this post is about.&lt;/p&gt;
+
+&lt;!-- Author and date --&gt;
+&lt;span class="post-author"&gt;Bingyi Kang&lt;/span&gt;
+&lt;span class="post-date"&gt;19 MAR 2026&lt;/span&gt;</code></pre>
+
+        <p>
+          Write the date in <code>DD MMM YYYY</code> format.
+          It will render in small uppercase monospace automatically.
+        </p>
+
+
+        <!-- 03 — Content Formatting -->
+        <h2>03 — Content Formatting</h2>
+        <p>
+          All post content goes inside <code>&lt;article class="prose-doc"&gt;</code>.
+          The following elements are pre-styled.
+        </p>
+
+        <h3>Headings</h3>
+        <p>
+          Use <code>h2</code> for major sections and <code>h3</code> for sub-sections.
+          Prefix section headings with a number and em dash to match the style of this post:
+        </p>
+        <pre><code>&lt;h2&gt;01 — Introduction&lt;/h2&gt;
+&lt;h2&gt;02 — Methods&lt;/h2&gt;
+&lt;h3&gt;Data Collection&lt;/h3&gt;</code></pre>
+
+        <h3>Paragraphs and Links</h3>
+        <p>Plain paragraphs and links need no extra classes:</p>
+        <pre><code>&lt;p&gt;
+  This is a paragraph. Links look like
+  &lt;a href="https://example.com"&gt;this&lt;/a&gt;.
+&lt;/p&gt;</code></pre>
+
+        <h3>Lists</h3>
+        <pre><code>&lt;ul&gt;
+  &lt;li&gt;Unordered item one&lt;/li&gt;
+  &lt;li&gt;Unordered item two&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Ordered item one&lt;/li&gt;
+  &lt;li&gt;Ordered item two&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+        <h3>Blockquote</h3>
+        <blockquote>
+          This is a blockquote. Use it for a key insight, a memorable quote,
+          or a highlighted takeaway.
+        </blockquote>
+        <pre><code>&lt;blockquote&gt;
+  Your quote or insight here.
+&lt;/blockquote&gt;</code></pre>
+
+        <h3>Inline Code and Code Blocks</h3>
+        <p>
+          Use <code>&lt;code&gt;</code> for inline snippets and
+          <code>&lt;pre&gt;&lt;code&gt;</code> for multi-line blocks:
+        </p>
+        <pre><code>&lt;p&gt;Call the function with &lt;code&gt;model.forward(x)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import torch
+x = torch.randn(1, 3, 224, 224)
+out = model(x)
+&lt;/code&gt;&lt;/pre&gt;</code></pre>
+
+        <h3>Images</h3>
+        <p>
+          Wrap images in a <code>figure</code> with class <code>post-image</code>.
+          Add an optional caption inside <code>figcaption</code>:
+        </p>
+        <pre><code>&lt;figure class="post-image"&gt;
+  &lt;img src="../images/your-image.png" alt="Description of image"&gt;
+  &lt;figcaption&gt;Figure 1. Caption text goes here.&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+        <p>Store images in <code>../images/</code> (the shared images folder one level up).</p>
+
+        <h3>Section Dividers</h3>
+        <p>Use a horizontal rule between major sections:</p>
+        <pre><code>&lt;hr class="section-divider"&gt;</code></pre>
+
+
+        <!-- 04 — Adding the Post to blog.html -->
+        <h2>04 — Adding the Post to blog.html</h2>
+        <p>
+          After writing your post, open <code>blog.html</code> and add a new card inside
+          <code>&lt;div class="flex flex-col gap-8 max-w-2xl"&gt;</code>:
+        </p>
+
+        <pre><code>&lt;div class="blog-card"&gt;
+  &lt;div class="blog-date"&gt;Mar 2026&lt;/div&gt;
+  &lt;a href="posts/your-post-filename.html" class="blog-title block mt-1"&gt;
+    Your Post Title
+  &lt;/a&gt;
+  &lt;p class="blog-desc"&gt;
+    One or two sentences summarizing the post.
+  &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+        <p>Add new cards at the top of the list so the most recent post appears first.</p>
+
+
+        <!-- 05 — Checklist Before Publishing -->
+        <h2>05 — Checklist Before Publishing</h2>
+        <ol>
+          <li>Update <code>&lt;title&gt;</code> in the <code>&lt;head&gt;</code>.</li>
+          <li>Fill in the post title, subtitle, and date in the header section.</li>
+          <li>Write content inside <code>&lt;article class="prose-doc"&gt;</code>.</li>
+          <li>Add images to <code>../images/</code> and reference them with the relative path.</li>
+          <li>Add a card to <code>blog.html</code> with the correct filename link.</li>
+          <li>Open both the post and the blog listing in a browser to verify links and layout.</li>
+        </ol>
+
+
+        <!-- 06 — Math Equations (LaTeX) -->
+        <h2>06 — Math Equations (LaTeX)</h2>
+        <p>
+          Math is rendered using <a href="https://katex.org/">KaTeX</a>, which is already
+          loaded in every post. Write LaTeX directly in the HTML — no extra setup needed.
+        </p>
+
+        <h3>Inline Math</h3>
+        <p>
+          Wrap inline expressions in single dollar signs: <code>$...$</code>.
+          For example, writing <code>$f(x) = x^2$</code> renders as $f(x) = x^2$,
+          and <code>$\mathcal{L} = -\mathbb{E}[\log p_\theta(x)]$</code> renders as
+          $\mathcal{L} = -\mathbb{E}[\log p_\theta(x)]$.
+        </p>
+
+        <h3>Display Math</h3>
+        <p>
+          Wrap block equations in double dollar signs: <code>$$...$$</code>.
+          They render centered on their own line.
+        </p>
+        <p>The cross-entropy loss:</p>
+        $$\mathcal{L}(\theta) = -\sum_{i=1}^{N} y_i \log \hat{y}_i$$
+        <p>The attention mechanism:</p>
+        $$\text{Attention}(Q, K, V) = \text{softmax}\!\left(\frac{QK^\top}{\sqrt{d_k}}\right)V$$
+        <p>A conditional probability using Bayes' theorem:</p>
+        $$P(A \mid B) = \frac{P(B \mid A)\, P(A)}{P(B)}$$
+
+        <h3>Usage in HTML</h3>
+        <pre><code>&lt;!-- Inline: wrap in $...$ --&gt;
+&lt;p&gt;The loss function $\mathcal{L}(\theta)$ is minimized during training.&lt;/p&gt;
+
+&lt;!-- Display block: wrap in $$...$$ on its own line --&gt;
+$$\mathcal{L}(\theta) = -\sum_{i=1}^{N} y_i \log \hat{y}_i$$</code></pre>
+
+        <div class="callout">
+          <p>
+            <strong>Note:</strong> KaTeX is faster than MathJax but covers most common
+            LaTeX math commands. If you need a command that fails to render, check the
+            <a href="https://katex.org/docs/supported.html">KaTeX supported functions list</a>.
+          </p>
+        </div>
+
+
+      </article>
+    </div>
+  </section>
+
+</body>
+</html>

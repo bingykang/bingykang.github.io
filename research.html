@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Bingyi Kang">
+  <title>Research — Bingyi Kang</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:     '#1B2A4A',
+            yellow:   '#E8C340',
+            cream:    '#F7F4EF',
+            graphite: '#4A5568',
+          },
+          fontFamily: {
+            mono:  ['"JetBrains Mono"', 'monospace'],
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { background-color: #F7F4EF; color: #1B2A4A; font-family: "Source Serif 4", Georgia, serif; }
+
+    /* --- Nav --- */
+    nav a {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 300ms ease;
+      text-decoration: none;
+      color: #1B2A4A;
+    }
+    nav a:hover { color: #E8C340; }
+    nav a.active { color: #1B2A4A; }
+
+    /* --- Section label --- */
+    .section-label {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #1B2A4A;
+      opacity: 0.5;
+    }
+
+    /* --- Publication rows --- */
+    .pub-row {
+      border-top: 1px solid rgba(27, 42, 74, 0.15);
+      padding: 1.5rem 0;
+    }
+    .pub-row:last-child { border-bottom: 1px solid rgba(27, 42, 74, 0.15); }
+
+    .pub-title   { font-weight: 600; font-size: 1.1rem; line-height: 1.4; }
+    .pub-authors { font-size: 0.975rem; color: #4A5568; margin-top: 0.2rem; }
+    .pub-self    { font-weight: 700; color: #1B2A4A; }
+
+    .pub-venue {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.82rem;
+      color: #1B2A4A;
+      opacity: 0.55;
+      margin-top: 0.3rem;
+      letter-spacing: 0.03em;
+    }
+
+    /* --- Links: plain text, slash-separated --- */
+    .pub-links {
+      margin-top: 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0;
+    }
+    .pub-link {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      color: #4872A0;
+      transition: color 200ms ease;
+      padding: 0 0.25rem;
+    }
+    .pub-link:first-child { padding-left: 0; }
+    .pub-link:hover { color: #E8C340; }
+    .pub-sep {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.82rem;
+      color: rgba(27, 42, 74, 0.3);
+      user-select: none;
+    }
+
+    /* --- Thumbnail --- */
+    .pub-thumb {
+      width: 100%;
+      max-height: 120px;
+      object-fit: cover;
+      border-radius: 2px;
+    }
+    @media (max-width: 768px) {
+      .pub-thumb { max-height: 180px; }
+    }
+
+    /* --- Section divider (Open Projects) --- */
+    .pub-section-heading {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #1B2A4A;
+      opacity: 0.45;
+      padding: 2rem 0 0.5rem;
+    }
+
+    footer {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+      opacity: 0.5;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav style="border-top: 3px solid #1B2A4A;">
+    <div class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+      <span class="font-mono tracking-widest uppercase opacity-60 font-bold" style="font-size: 0.8rem;">Bingyi Kang</span>
+      <div class="flex gap-4 sm:gap-8">
+        <a href="index.html">Home</a>
+        <a href="research.html" class="active" style="font-weight: 600;">Research</a>
+        <a href="blog.html">Blog</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Research -->
+  <section class="py-16">
+    <div class="max-w-4xl mx-auto px-6">
+
+      <p class="section-label mb-2">Selected Work</p>
+      <h2 class="text-2xl font-semibold mb-2">Research</h2>
+      <p class="text-base text-graphite mb-10">
+        (* equal contribution &nbsp;&middot;&nbsp; &dagger; project lead) &nbsp;
+        Full list on
+        <a href="https://scholar.google.com.sg/citations?user=NmHgX-wAAAAJ&hl=en" target="_blank"
+           class="underline underline-offset-2">Google Scholar</a>.
+      </p>
+
+
+      <!-- SpatialTree -->
+      <div class="pub-row flex flex-col md:flex-row gap-5">
+        <div class="md:w-48 flex-shrink-0 flex items-center">
+          <img src="images/spatialtree.jpg" alt="SpatialTree" class="pub-thumb">
+        </div>
+        <div class="flex-1">
+          <div class="pub-title">SpatialTree: How Spatial Abilities Branch Out in MLLMs</div>
+          <div class="pub-authors">
+            Yuxi Xiao*, Longfei Li*, Shen Yan, Xinhang Liu, Sida Peng, Yunchao Wei,
+            Xiaowei Zhou, <span class="pub-self">Bingyi Kang</span>&dagger;
+          </div>
+          <div class="pub-venue">CVPR 2026</div>
+          <div class="pub-links">
+            <a href="https://spatialtree.github.io/" target="_blank" class="pub-link">Project Page</a>
+            <span class="pub-sep">/</span>
+            <a href="https://arxiv.org/abs/2512.20617" target="_blank" class="pub-link">Paper</a>
+            <span class="pub-sep">/</span>
+            <a href="https://github.com/ByteDance-Seed/SpatialTree" target="_blank" class="pub-link">Code</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Depth Anything 3 -->
+      <div class="pub-row flex flex-col md:flex-row gap-5">
+        <div class="md:w-48 flex-shrink-0 flex items-center">
+          <img src="images/da3.gif" alt="Depth Anything 3" class="pub-thumb">
+        </div>
+        <div class="flex-1">
+          <div class="pub-title">Depth Anything 3: Recovering the Visual Space from Any Views</div>
+          <div class="pub-authors">
+            Haotong Lin*, Sili Chen*, Jun Hao Liew*, Donny Y. Chen*, Zhenyu Li, Guang Shi,
+            Jiashi Feng, <span class="pub-self">Bingyi Kang</span>*&dagger;
+          </div>
+          <div class="pub-venue">ICLR 2026</div>
+          <div class="pub-links">
+            <a href="https://depth-anything-3.github.io/" target="_blank" class="pub-link">Project Page</a>
+            <span class="pub-sep">/</span>
+            <a href="https://arxiv.org/abs/2511.10647" target="_blank" class="pub-link">Paper</a>
+            <span class="pub-sep">/</span>
+            <a href="https://github.com/ByteDance-Seed/depth-anything-3" target="_blank" class="pub-link">Code</a>
+            <span class="pub-sep">/</span>
+            <a href="https://huggingface.co/spaces/depth-anything/depth-anything-3" target="_blank" class="pub-link">Demo</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Trace Anything -->
+      <div class="pub-row flex flex-col md:flex-row gap-5">
+        <div class="md:w-48 flex-shrink-0 flex items-center">
+          <img src="images/trace_anything.png" alt="Trace Anything" class="pub-thumb">
+        </div>
+        <div class="flex-1">
+          <div class="pub-title">Trace Anything: Representing Any Video in 4D via Trajectory Fields</div>
+          <div class="pub-authors">
+            Xinhang Liu, Yuxi Xiao, Donny Y. Chen, Jiashi Feng, Yu-Wing Tai, Chi-Keung Tang,
+            <span class="pub-self">Bingyi Kang</span>&dagger;
+          </div>
+          <div class="pub-venue">ICLR 2026</div>
+          <div class="pub-links">
+            <a href="https://trace-anything.github.io/" target="_blank" class="pub-link">Project Page</a>
+            <span class="pub-sep">/</span>
+            <a href="https://github.com/ByteDance-Seed/TraceAnything" target="_blank" class="pub-link">Code</a>
+            <span class="pub-sep">/</span>
+            <a href="https://huggingface.co/depth-anything/trace-anything" target="_blank" class="pub-link">Model</a>
+            <span class="pub-sep">/</span>
+            <a href="https://youtu.be/J6y5l2E6qjA" target="_blank" class="pub-link">Video</a>
+            <span class="pub-sep">/</span>
+            <a href="https://trace-anything.github.io/viser-client/interactive.html" target="_blank" class="pub-link">Interactive Results</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Manipulation as in Simulation -->
+      <div class="pub-row flex flex-col md:flex-row gap-5">
+        <div class="md:w-48 flex-shrink-0 flex items-center">
+          <video muted autoplay loop class="pub-thumb">
+            <source src="images/mani-as-in-sim.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="flex-1">
+          <div class="pub-title">Manipulation as in Simulation: Enabling Accurate Geometry Perception in Robots</div>
+          <div class="pub-authors">
+            Minghuan Liu*&dagger;, Zhengbang Zhu*, Xiaoshen Han*, Peng Hu*, Haotong Lin, Xinyao Li,
+            Jingxiao Chen, Jiafeng Xu, Yichu Yang, Yunfeng Lin, Xinghang Li, Yong Yu, Weinan Zhang,
+            Tao Kong, <span class="pub-self">Bingyi Kang</span>&dagger;
+          </div>
+          <div class="pub-venue">ICLR 2026</div>
+          <div class="pub-links">
+            <a href="https://manipulation-as-in-simulation.github.io/" target="_blank" class="pub-link">Project Page</a>
+            <span class="pub-sep">/</span>
+            <a href="https://arxiv.org/abs/2509.02530" target="_blank" class="pub-link">Paper</a>
+            <span class="pub-sep">/</span>
+            <a href="https://github.com/ByteDance-Seed/manip-as-in-sim-suite" target="_blank" class="pub-link">Code</a>
+            <span class="pub-sep">/</span>
+            <a href="https://huggingface.co/datasets/ByteDance-Seed/ByteCameraDepth" target="_blank" class="pub-link">Dataset</a>
+            <span class="pub-sep">/</span>
+            <a href="https://youtu.be/cPTuK3nKvs8" target="_blank" class="pub-link">Video</a>
+            <span class="pub-sep">/</span>
+            <a href="https://manipulation-as-in-simulation.github.io/docs/" target="_blank" class="pub-link">Sim2Real Docs</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- SpatialTrackerV2 -->
+      <div class="pub-row flex flex-col md:flex-row gap-5">
+        <div class="md:w-48 flex-shrink-0 flex items-center">
+          <video muted autoplay loop class="pub-thumb">
+            <source src="images/spatrack2_teaser.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="flex-1">
+          <div class="pub-title">SpatialTrackerV2: 3D Point Tracking Made Easy</div>
+          <div class="pub-authors">
+            Yuxi Xiao, Jianyuan Wang, Nan Xue, Nikita Karaev, Yuri Makarov,
+            <span class="pub-self">Bingyi Kang</span>, Xing Zhu, Hujun Bao, Yujun Shen, Xiaowei Zhou
+          </div>
+          <div class="pub-venue">ICCV 2025</div>
+          <div class="pub-links">
+            <a href="https://spatialtracker.github.io/" target="_blank" class="pub-link">Project Page</a>
+            <span class="pub-sep">/</span>
+            <a href="https://arxiv.org/abs/2507.12462" target="_blank" class="pub-link">Paper</a>
+            <span class="pub-sep">/</span>
+            <a href="https://github.com/henry123-boy/SpaTrackerV2" target="_blank" class="pub-link">Code</a>
+            <span class="pub-sep">/</span>
+            <a href="https://huggingface.co/spaces/Yuxihenry/SpatialTrackerV2" target="_blank" class="pub-link">Demo</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- PhyWorld -->
+      <div class="pub-row flex flex-col md:flex-row gap-5">
+        <div class="md:w-48 flex-shrink-0 flex items-center">
+          <video muted autoplay loop class="pub-thumb">
+            <source src="images/phyworld_teaser.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="flex-1">
+          <div class="pub-title">How Far is Video Generation from World Model? — A Physical Law Perspective</div>
+          <div class="pub-authors">
+            <span class="pub-self">Bingyi Kang</span>*, Yang Yue*, Rui Lu, Zhijie Lin, Yang Zhao,
+            Kaixin Wang, Gao Huang, Jiashi Feng
+          </div>
+          <div class="pub-venue">*Equal Contribution in alphabetical order</div>
+          <div class="pub-venue">ICML 2025</div>
+          <div class="pub-links">
+            <a href="https://phyworld.github.io/" target="_blank" class="pub-link">Project Page</a>
+            <span class="pub-sep">/</span>
+            <a href="https://arxiv.org/abs/2411.02385" target="_blank" class="pub-link">Paper</a>
+            <span class="pub-sep">/</span>
+            <a href="https://github.com/phyworld/phyworld" target="_blank" class="pub-link">Code</a>
+            <span class="pub-sep">/</span>
+            <a href="https://huggingface.co/datasets/magicr/phyworld" target="_blank" class="pub-link">Data</a>
+            <span class="pub-sep">/</span>
+            <a href="https://www.youtube.com/watch?v=yWSn9Xyrkso" target="_blank" class="pub-link">Video</a>
+            <span class="pub-sep">/</span>
+            <a href="https://x.com/bingyikang/status/1853635009611219019" target="_blank" class="pub-link">Media</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Video Depth Anything -->
+      <div class="pub-row flex flex-col md:flex-row gap-5">
+        <div class="md:w-48 flex-shrink-0 flex items-center">
+          <video muted autoplay loop class="pub-thumb">
+            <source src="images/vda.mov" type="video/mp4">
+          </video>
+        </div>
+        <div class="flex-1">
+          <div class="pub-title">Video Depth Anything: Consistent Depth Estimation for Super-Long Videos</div>
+          <div class="pub-authors">
+            Sili Chen, Hengkai Guo, Shengnan Zhu, Feihu Zhang, Zilong Huang, Jiashi Feng,
+            <span class="pub-self">Bingyi Kang</span>
+          </div>
+          <div class="pub-venue">CVPR 2025</div>
+          <div class="pub-links">
+            <a href="https://videodepthanything.github.io/" target="_blank" class="pub-link">Project Page</a>
+            <span class="pub-sep">/</span>
+            <a href="https://arxiv.org/abs/2501.12375" target="_blank" class="pub-link">Paper</a>
+            <span class="pub-sep">/</span>
+            <a href="https://github.com/DepthAnything/Video-Depth-Anything" target="_blank" class="pub-link">Code</a>
+            <span class="pub-sep">/</span>
+            <a href="https://huggingface.co/spaces/depth-anything/Video-Depth-Anything" target="_blank" class="pub-link">Demo</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- PromptDA -->
+      <div class="pub-row flex flex-col md:flex-row gap-5">
+        <div class="md:w-48 flex-shrink-0 flex items-center">
+          <video muted autoplay loop class="pub-thumb">
+            <source src="images/promptda.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="flex-1">
+          <div class="pub-title">Prompting Depth Anything for 4K Resolution Accurate Metric Depth Estimation</div>
+          <div class="pub-authors">
+            Haotong Lin, Sida Peng, Jingxiao Chen, Songyou Peng, Jiaming Sun, Minghuan Liu,
+            Hujun Bao, Jiashi Feng, Xiaowei Zhou, <span class="pub-self">Bingyi Kang</span>
+          </div>
+          <div class="pub-venue">CVPR 2025</div>
+          <div class="pub-links">
+            <a href="https://promptda.github.io" target="_blank" class="pub-link">Project Page</a>
+            <span class="pub-sep">/</span>
+            <a href="https://arxiv.org/abs/2412.14015" target="_blank" class="pub-link">Paper</a>
+            <span class="pub-sep">/</span>
+            <a href="https://github.com/DepthAnything/PromptDA" target="_blank" class="pub-link">Code</a>
+            <span class="pub-sep">/</span>
+            <a href="https://huggingface.co/spaces/depth-anything/PromptDA" target="_blank" class="pub-link">Demo</a>
+            <span class="pub-sep">/</span>
+            <a href="https://promptda.github.io/interactive.html" target="_blank" class="pub-link">Interactive Results</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- VideoWorld -->
+      <div class="pub-row flex flex-col md:flex-row gap-5">
+        <div class="md:w-48 flex-shrink-0 flex items-center">
+          <img src="images/videoworld.png" alt="VideoWorld" class="pub-thumb">
+        </div>
+        <div class="flex-1">
+          <div class="pub-title">VideoWorld: Exploring Knowledge Learning from Unlabeled Videos</div>
+          <div class="pub-authors">
+            Zhongwei Ren, Yunchao Wei, Xun Guo, Yao Zhao, <span class="pub-self">Bingyi Kang</span>,
+            Jiashi Feng, Xiaojie Jin
+          </div>
+          <div class="pub-venue">CVPR 2025</div>
+          <div class="pub-links">
+            <a href="https://maverickren.github.io/VideoWorld.github.io/" target="_blank" class="pub-link">Project Page</a>
+            <span class="pub-sep">/</span>
+            <a href="https://arxiv.org/abs/2501.09781" target="_blank" class="pub-link">Paper</a>
+            <span class="pub-sep">/</span>
+            <a href="https://github.com/bytedance/VideoWorld" target="_blank" class="pub-link">Code</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- RoboVLMs -->
+      <div class="pub-row flex flex-col md:flex-row gap-5">
+        <div class="md:w-48 flex-shrink-0 flex items-center">
+          <img src="images/robovlms.jpg" alt="RoboVLMs" class="pub-thumb">
+        </div>
+        <div class="flex-1">
+          <div class="pub-title">Towards Generalist Robot Policies: What Matters in Building Vision-Language-Action Models</div>
+          <div class="pub-authors">
+            Xinghang Li, Peiyan Li, Minghuan Liu, Dong Wang, Jirong Liu, <span class="pub-self">Bingyi Kang</span>,
+            Xiao Ma, Tao Kong, Hanbo Zhang, Huaping Liu
+          </div>
+          <div class="pub-venue">Natural Machine Intelligence, 2025</div>
+          <div class="pub-links">
+            <a href="https://robovlms.github.io" target="_blank" class="pub-link">Project Page</a>
+            <span class="pub-sep">/</span>
+            <a href="https://arxiv.org/abs/2412.14058" target="_blank" class="pub-link">Paper</a>
+            <span class="pub-sep">/</span>
+            <a href="https://github.com/Robot-VLAs/RoboVLMs" target="_blank" class="pub-link">Code</a>
+            <span class="pub-sep">/</span>
+            <a href="https://huggingface.co/robovlms/RoboVLMs" target="_blank" class="pub-link">Model</a>
+            <span class="pub-sep">/</span>
+            <a href="https://huggingface.co/datasets/robovlms/bytedance_robot_benchmark_20" target="_blank" class="pub-link">Dataset</a>
+            <span class="pub-sep">/</span>
+            <a href="https://robovlms.github.io/#rollouts" target="_blank" class="pub-link">Videos</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Classification Done Right -->
+      <div class="pub-row flex flex-col md:flex-row gap-5">
+        <div class="md:w-48 flex-shrink-0 flex items-center">
+          <img src="images/superclass.png" alt="Superclass" class="pub-thumb">
+        </div>
+        <div class="flex-1">
+          <div class="pub-title">Classification Done Right for Vision-Language Pre-Training</div>
+          <div class="pub-authors">
+            Zilong Huang, Qinghao Ye, <span class="pub-self">Bingyi Kang</span>, Jiashi Feng, Haoqi Fan
+          </div>
+          <div class="pub-venue">NeurIPS 2024</div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2411.03313" target="_blank" class="pub-link">Paper</a>
+            <span class="pub-sep">/</span>
+            <a href="https://github.com/x-cls/superclass" target="_blank" class="pub-link">Code</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Image Understanding Tokenizer -->
+      <div class="pub-row flex flex-col md:flex-row gap-5">
+        <div class="md:w-48 flex-shrink-0 flex items-center">
+          <img src="images/understanding_help_gen.png" alt="Image Understanding Tokenizer" class="pub-thumb">
+        </div>
+        <div class="flex-1">
+          <div class="pub-title">Image Understanding Makes for A Good Tokenizer for Image Generation</div>
+          <div class="pub-authors">
+            Luting Wang, Yang Zhao, Zijian Zhang, Jiashi Feng, Si Liu,
+            <span class="pub-self">Bingyi Kang</span>&dagger;
+          </div>
+          <div class="pub-venue">NeurIPS 2024</div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2411.04406" target="_blank" class="pub-link">Paper</a>
+            <span class="pub-sep">/</span>
+            <a href="https://github.com/magic-research/vector_quantization" target="_blank" class="pub-link">Code</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Depth Anything V2 -->
+      <div class="pub-row flex flex-col md:flex-row gap-5">
+        <div class="md:w-48 flex-shrink-0 flex items-center">
+          <video muted autoplay loop class="pub-thumb">
+            <source src="images/depth_anything_v2.mov" type="video/mp4">
+          </video>
+        </div>
+        <div class="flex-1">
+          <div class="pub-title">Depth Anything V2</div>
+          <div class="pub-authors">
+            Lihe Yang, <span class="pub-self">Bingyi Kang</span>&dagger;, Zilong Huang, Zhen Zhao,
+            Xiaogang Xu, Jiashi Feng, Hengshuang Zhao
+          </div>
+          <div class="pub-venue">NeurIPS 2024</div>
+          <div class="pub-links">
+            <a href="https://depth-anything-v2.github.io/" target="_blank" class="pub-link">Project Page</a>
+            <span class="pub-sep">/</span>
+            <a href="https://arxiv.org/abs/2406.09414" target="_blank" class="pub-link">Paper</a>
+            <span class="pub-sep">/</span>
+            <a href="https://github.com/DepthAnything/Depth-Anything-V2" target="_blank" class="pub-link">Code</a>
+            <span class="pub-sep">/</span>
+            <a href="https://huggingface.co/spaces/depth-anything/Depth-Anything-V2" target="_blank" class="pub-link">Demo</a>
+            <span class="pub-sep">/</span>
+            <a href="https://x.com/_akhaliq/status/1801432403665125738" target="_blank" class="pub-link">Media</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- MADiff -->
+      <div class="pub-row flex flex-col md:flex-row gap-5">
+        <div class="md:w-48 flex-shrink-0 flex items-center">
+          <img src="images/madiff.png" alt="MADiff" class="pub-thumb">
+        </div>
+        <div class="flex-1">
+          <div class="pub-title">MADiff: Offline Multi-agent Learning with Diffusion Models</div>
+          <div class="pub-authors">
+            Zhengbang Zhu, Minghuan Liu, Liyuan Mao, <span class="pub-self">Bingyi Kang</span>,
+            Minkai Xu, Yong Yu, Stefano Ermon, Weinan Zhang
+          </div>
+          <div class="pub-venue">NeurIPS 2024</div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2305.17330" target="_blank" class="pub-link">Paper</a>
+            <span class="pub-sep">/</span>
+            <a href="https://github.com/zbzhu99/madiff" target="_blank" class="pub-link">Code</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- REM / Token-Based World Models -->
+      <div class="pub-row flex flex-col md:flex-row gap-5">
+        <div class="md:w-48 flex-shrink-0 flex items-center">
+          <img src="images/world_model.png" alt="Token-Based World Models" class="pub-thumb">
+        </div>
+        <div class="flex-1">
+          <div class="pub-title">Improving Token-Based World Models with Parallel Observation Prediction</div>
+          <div class="pub-authors">
+            Lior Cohen, Kaixin Wang, <span class="pub-self">Bingyi Kang</span>, Shie Mannor
+          </div>
+          <div class="pub-venue">ICML 2024</div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2402.05643" target="_blank" class="pub-link">Paper</a>
+            <span class="pub-sep">/</span>
+            <a href="https://github.com/leor-c/REM" target="_blank" class="pub-link">Code</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Depth Anything -->
+      <div class="pub-row flex flex-col md:flex-row gap-5">
+        <div class="md:w-48 flex-shrink-0 flex items-center">
+          <video muted autoplay loop class="pub-thumb">
+            <source src="images/depth_anything.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="flex-1">
+          <div class="pub-title">Depth Anything: Unleashing the Power of Large-Scale Unlabeled Data</div>
+          <div class="pub-authors">
+            Lihe Yang, <span class="pub-self">Bingyi Kang</span>&dagger;, Zilong Huang,
+            Xiaogang Xu, Jiashi Feng, Hengshuang Zhao
+          </div>
+          <div class="pub-venue">CVPR 2024</div>
+          <div class="pub-links">
+            <a href="https://depth-anything.github.io/" target="_blank" class="pub-link">Project Page</a>
+            <span class="pub-sep">/</span>
+            <a href="https://arxiv.org/abs/2401.10891" target="_blank" class="pub-link">Paper</a>
+            <span class="pub-sep">/</span>
+            <a href="https://github.com/LiheYoung/Depth-Anything" target="_blank" class="pub-link">Code</a>
+            <span class="pub-sep">/</span>
+            <a href="https://huggingface.co/spaces/LiheYoung/Depth-Anything" target="_blank" class="pub-link">Demo</a>
+            <span class="pub-sep">/</span>
+            <a href="https://twitter.com/_akhaliq/status/1749284669936275463" target="_blank" class="pub-link">Media</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- SEEM -->
+      <div class="pub-row flex flex-col md:flex-row gap-5">
+        <div class="md:w-48 flex-shrink-0 flex items-center">
+          <img src="images/seem_poster.jpg" alt="SEEM" class="pub-thumb">
+        </div>
+        <div class="flex-1">
+          <div class="pub-title">Understanding, Predicting and Better Resolving Q-Value Divergence in Offline RL</div>
+          <div class="pub-authors">
+            Yang Yue*, Rui Lu*, <span class="pub-self">Bingyi Kang</span>*, Shiji Song, Gao Huang
+          </div>
+          <div class="pub-venue">NeurIPS 2023</div>
+          <div class="pub-links">
+            <a href="https://offrl-seem.github.io/" target="_blank" class="pub-link">Project Page</a>
+            <span class="pub-sep">/</span>
+            <a href="https://arxiv.org/abs/2310.04411" target="_blank" class="pub-link">Paper</a>
+            <span class="pub-sep">/</span>
+            <a href="https://github.com/yueyang130/SEEM/" target="_blank" class="pub-link">Code</a>
+            <span class="pub-sep">/</span>
+            <a href="https://drive.google.com/file/d/1JCxqy7Aa9lr3bLf4uPvu_JFuu_iX9mxZ/view?usp=drive_link" target="_blank" class="pub-link">Slides</a>
+            <span class="pub-sep">/</span>
+            <a href="https://drive.google.com/file/d/19X8lLb98kSzr8rnFtRNkW2qtgtEZRsVz/view?usp=drive_link" target="_blank" class="pub-link">Poster</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- EDP -->
+      <div class="pub-row flex flex-col md:flex-row gap-5">
+        <div class="md:w-48 flex-shrink-0 flex items-center">
+          <img src="images/edp_teaser.png" alt="EDP" class="pub-thumb">
+        </div>
+        <div class="flex-1">
+          <div class="pub-title">Efficient Diffusion Policies for Offline Reinforcement Learning</div>
+          <div class="pub-authors">
+            <span class="pub-self">Bingyi Kang</span>*, Xiao Ma*, Chao Du, Tianyu Pang, Shuicheng Yan
+          </div>
+          <div class="pub-venue">NeurIPS 2023</div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2305.20081" target="_blank" class="pub-link">Paper</a>
+            <span class="pub-sep">/</span>
+            <a href="https://github.com/sail-sg/edp" target="_blank" class="pub-link">Code</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- MISA -->
+      <div class="pub-row flex flex-col md:flex-row gap-5">
+        <div class="md:w-48 flex-shrink-0 flex items-center">
+          <img src="images/misa.png" alt="MISA" class="pub-thumb">
+        </div>
+        <div class="flex-1">
+          <div class="pub-title">Mutual Information Regularized Offline Reinforcement Learning</div>
+          <div class="pub-authors">
+            Xiao Ma*, <span class="pub-self">Bingyi Kang</span>*, Zhongwen Xu, Min Lin, Shuicheng Yan
+          </div>
+          <div class="pub-venue">NeurIPS 2023</div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2210.07484" target="_blank" class="pub-link">Paper</a>
+            <span class="pub-sep">/</span>
+            <a href="https://github.com/sail-sg/misa" target="_blank" class="pub-link">Code</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- FreeMask -->
+      <div class="pub-row flex flex-col md:flex-row gap-5">
+        <div class="md:w-48 flex-shrink-0 flex items-center">
+          <img src="images/freemask.png" alt="FreeMask" class="pub-thumb">
+        </div>
+        <div class="flex-1">
+          <div class="pub-title">FreeMask: Synthetic Images with Dense Annotations Make Stronger Segmentation Models</div>
+          <div class="pub-authors">
+            Lihe Yang, Xiaogang Xu, <span class="pub-self">Bingyi Kang</span>, Yinghuan Shi, Hengshuang Zhao
+          </div>
+          <div class="pub-venue">NeurIPS 2023</div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2310.15160" target="_blank" class="pub-link">Paper</a>
+            <span class="pub-sep">/</span>
+            <a href="https://github.com/LiheYoung/FreeMask" target="_blank" class="pub-link">Code</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- BalFeat -->
+      <div class="pub-row flex flex-col md:flex-row gap-5">
+        <div class="md:w-48 flex-shrink-0 flex items-center">
+          <img src="images/balfeat.jpg" alt="BalFeat" class="pub-thumb">
+        </div>
+        <div class="flex-1">
+          <div class="pub-title">Exploring Balanced Feature Spaces for Representation Learning</div>
+          <div class="pub-authors">
+            <span class="pub-self">Bingyi Kang</span>, Yu Li, Saining Xie, Zehuan Yuan, Jiashi Feng
+          </div>
+          <div class="pub-venue">ICLR 2021</div>
+          <div class="pub-links">
+            <a href="https://openreview.net/pdf?id=OqtLIabPTit" target="_blank" class="pub-link">Paper</a>
+            <span class="pub-sep">/</span>
+            <a href="https://github.com/bingykang/BalFeat" target="_blank" class="pub-link">Code</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Decoupling -->
+      <div class="pub-row flex flex-col md:flex-row gap-5">
+        <div class="md:w-48 flex-shrink-0 flex items-center">
+          <img src="images/decouple.png" alt="Decoupling" class="pub-thumb">
+        </div>
+        <div class="flex-1">
+          <div class="pub-title">Decoupling Representation and Classifier for Long-Tailed Recognition</div>
+          <div class="pub-authors">
+            <span class="pub-self">Bingyi Kang</span>, Saining Xie, Marcus Rohrbach, Zhicheng Yan,
+            Albert Gordo, Jiashi Feng, Yannis Kalantidis
+          </div>
+          <div class="pub-venue">ICLR 2020</div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/1910.09217" target="_blank" class="pub-link">Paper</a>
+            <span class="pub-sep">/</span>
+            <a href="https://github.com/facebookresearch/classifier-balancing" target="_blank" class="pub-link">Code</a>
+            <span class="pub-sep">/</span>
+            <a href="https://docs.google.com/presentation/d/1ALgcp2RBaC7T9Pbgh4qciZ2gFSc_yV_ajfV78RCjLhs/edit?usp=sharing" target="_blank" class="pub-link">Slides</a>
+            <span class="pub-sep">/</span>
+            <a href="https://iclr.cc/virtual_2020/poster_r1gRTCVFvB.html" target="_blank" class="pub-link">Talk</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Few-Shot Detection -->
+      <div class="pub-row flex flex-col md:flex-row gap-5">
+        <div class="md:w-48 flex-shrink-0 flex items-center">
+          <img src="images/few.jpg" alt="Few-shot detection" class="pub-thumb">
+        </div>
+        <div class="flex-1">
+          <div class="pub-title">Few-Shot Object Detection via Feature Reweighting</div>
+          <div class="pub-authors">
+            <span class="pub-self">Bingyi Kang</span>*, Zhuang Liu*, Xin Wang, Fisher Yu,
+            Jiashi Feng, Trevor Darrell
+          </div>
+          <div class="pub-venue">ICCV 2019</div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/1812.01866" target="_blank" class="pub-link">Paper</a>
+            <span class="pub-sep">/</span>
+            <a href="https://github.com/bingykang/Fewshot_Detection" target="_blank" class="pub-link">Code</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- PoFD -->
+      <div class="pub-row flex flex-col md:flex-row gap-5">
+        <div class="md:w-48 flex-shrink-0 flex items-center">
+          <img src="images/pofd.png" alt="PoFD" class="pub-thumb">
+        </div>
+        <div class="flex-1">
+          <div class="pub-title">Policy Optimization with Demonstrations</div>
+          <div class="pub-authors">
+            <span class="pub-self">Bingyi Kang</span>*, Zequn Jie, Jiashi Feng
+          </div>
+          <div class="pub-venue">ICML 2018</div>
+          <div class="pub-links">
+            <a href="https://proceedings.mlr.press/v80/kang18a/kang18a.pdf" target="_blank" class="pub-link">Paper</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Open Projects -->
+      <p class="pub-section-heading">Open Projects</p>
+
+
+      <!-- BuboGPT -->
+      <div class="pub-row flex flex-col md:flex-row gap-5">
+        <div class="md:w-48 flex-shrink-0 flex items-center">
+          <img src="images/bubogpt.png" alt="BuboGPT" class="pub-thumb">
+        </div>
+        <div class="flex-1">
+          <div class="pub-title">BuboGPT: Enabling Visual Grounding in Multi-Modal LLMs</div>
+          <div class="pub-authors">
+            Yang Zhao*, Zhijie Lin*, Daquan Zhou, Zilong Huang, Jiashi Feng,
+            <span class="pub-self">Bingyi Kang</span>&dagger;
+          </div>
+          <div class="pub-venue">Open Project, 2023</div>
+          <div class="pub-links">
+            <a href="https://bubo-gpt.github.io/" target="_blank" class="pub-link">Project Page</a>
+            <span class="pub-sep">/</span>
+            <a href="https://arxiv.org/abs/2307.08581" target="_blank" class="pub-link">Paper</a>
+            <span class="pub-sep">/</span>
+            <a href="https://github.com/magic-research/bubogpt" target="_blank" class="pub-link">Code</a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+</body>
+</html>
